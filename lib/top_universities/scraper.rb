@@ -10,10 +10,11 @@ class TopUniversities::Scraper
   
   def make_universities
     scrape_universities.each do |u|
+      anchor = u.css("div.para")[1]
       hash={
         :rank => u.css("div.para")[0].text,
         :name => u.css("div.para")[1].text,
-        :url => u.css("div.para")[1].css("a").attribute['href'].value,
+        :url => anchor.xpath('//a/@href').text.strip,
         :location => u.css("div.para")[2].text 
       }
       TopUniversities::University.new(hash)
