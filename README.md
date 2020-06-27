@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-Type the below and follow prompts
+Type the below and follow prompts:
+
     $ top-universities
 
 ## Development
