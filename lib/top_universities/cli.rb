@@ -14,7 +14,7 @@ class TopUniversities::CLI
     input1 = gets.strip.to_i 
     print_university(TopUniversities::University.find(input1))
     puts""
-    puts"Would you like like to link to access more information about this school? Y/N"
+    puts"Would you like to have link to access more information about this school? Y/N"
     input = gets.strip.downcase
     if(input == "y")
       puts ""
